@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="container1">
-    <select-list>Ship List</select-list>
+    <h1 class="ship-title">Ship List</h1>
+    <!-- <select-list :list ="selectedList"> Ship List</select-list>
+    <select-list>Launch List</select-list> -->
     <ship-list class="ship-list"  :ships = "ships">  </ship-list>
     <ship-detail class="container2" :ship = "selectedShip"> </ship-detail>
   </div>
@@ -47,4 +49,28 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.container1{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+
+}
+.container2{
+  background-color: pink;
+}
+ul {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+
+
+}
+
+li {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+}
 </style>
