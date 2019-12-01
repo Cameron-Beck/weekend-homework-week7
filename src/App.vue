@@ -1,28 +1,47 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="html">
+  <div class="container1">
+      <h1>All Ships</h1>
+  <ship-list class="ship-list"  :ships = "ships">  </ship-list>
+
+  <ship-detail class="container2" :ship = "selectedShip"> </ship-detail>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ShipDetail from "./components/ShipDetail.vue"
+import ShipList from "./components/ShipList.vue"
+import SingleShip from "./components/SingleShip.vue"
 
+import {eventBus} from "./main.js"
 export default {
-  name: 'app',
+  name: "App",
+  data(){
+    return {
+      ships: [],
+      selectedShip: null,
+      favorites: [],
+      beerToRemove: ""
+    }
+  },
+  mounted(){
+    fetch("https://api.spacexdata.com/v3/ships")
+    .then(result => result.json())
+    .then(ships => this.ships = ships)
+
+    eventBus.$on("ship-selected", ship => {this.selectedShip = ship})
+  },
+  computed:{
+
+  },
   components: {
-    HelloWorld
+    "ship-list": ShipList,
+    "ship-detail": ShipDetail,
+    "single-ship": SingleShip
+  },
+  methods:{
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="css" scoped>
 </style>
