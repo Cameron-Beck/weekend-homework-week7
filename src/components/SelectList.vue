@@ -19,8 +19,7 @@ export default {
       handleClick(){
         eventBus.$emit("list-selected", this.list)
   },
-    }
-
+}
 }
 </script>
 

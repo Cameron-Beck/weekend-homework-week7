@@ -5,7 +5,6 @@
     <p>Weight KG: {{ship.weight_kg}}</p>
     <p>Home Port: {{ship.home_port}}</p>
     <img :src="ship.image" alt=""    height="300" >
-
   </div>
 </template>
 
@@ -24,7 +23,6 @@ export default {
    font-size: 20px;
    margin: 10px;
  }
-
  img{
    height: 300px;
    width: 300px;

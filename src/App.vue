@@ -1,8 +1,6 @@
 <template lang="html">
   <div class="container1">
     <h1 class="ship-title">Ship List</h1>
-    <!-- <select-list :list ="selectedList"> Ship List</select-list>
-    <select-list>Launch List</select-list> -->
     <ship-list class="ship-list"  :ships = "ships">  </ship-list>
     <ship-detail class="container2" :ship = "selectedShip"> </ship-detail>
   </div>
@@ -13,8 +11,8 @@ import ShipDetail from "./components/ShipDetail.vue"
 import ShipList from "./components/ShipList.vue"
 import SingleShip from "./components/SingleShip.vue"
 import SelectList from "./components/SelectList.vue"
-
 import {eventBus} from "./main.js"
+
 export default {
   name: "App",
   data(){
@@ -34,10 +32,7 @@ export default {
     eventBus.$on("list-selected", list => {this.selectedList = list})
     eventBus.$on("ship-selected", ship => {this.selectedShip = ship})
   },
-  computed:{
-
-  },
-  components: {
+    components: {
     "ship-list": ShipList,
     "ship-detail": ShipDetail,
     "single-ship": SingleShip,

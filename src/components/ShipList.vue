@@ -8,7 +8,6 @@
 import SingleShip from "./SingleShip.vue";
 export default {
   name: "ship-list",
-
   props: ["ships"],
 
   components:{
@@ -16,7 +15,6 @@ export default {
   }
 }
 </script>
-
 <style lang="css" scoped>
 .ship-list{
   margin-left: 5px;

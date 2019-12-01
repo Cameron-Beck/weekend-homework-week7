@@ -19,8 +19,8 @@ export default {
   methods: {
     handleClick(){
       eventBus.$emit("ship-selected", this.ship)
-},
-  }
+    },
+}
 }
 </script>
 
