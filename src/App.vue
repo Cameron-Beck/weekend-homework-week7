@@ -50,14 +50,23 @@ export default {
 
 <style lang="css" scoped>
 .container1{
-  background-color: red;
+  background-color: #fffff2;
   display: flex;
   flex-direction: column;
   padding: 5px;
 
 }
 .container2{
-  background-color: pink;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.ship-title{
+  align-self: center;
+  margin-bottom: -5px;
+  margin-top: -5px;
 }
 ul {
   display:flex;
@@ -66,9 +75,4 @@ ul {
   list-style-type: none;
 }
 
-li {
-  display: block;
-  margin: 100px;
-
-}
 </style>

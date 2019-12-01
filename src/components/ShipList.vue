@@ -19,7 +19,6 @@ export default {
 
 <style lang="css" scoped>
 .ship-list{
-  background-color: grey;
   margin-left: 5px;
   margin-right: 5px;
   margin: 10px;
