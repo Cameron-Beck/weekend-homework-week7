@@ -1,6 +1,6 @@
 <template lang="html">
   <ul>
-    <single-ship v-for="(ship, index) in ships" :ship ="ship" :key ="index">{{ship.ship_name}}</single-ship>
+    <single-ship class="ship-list" v-for="(ship, index) in ships" :ship ="ship" :key ="index">{{ship.ship_name}}</single-ship>
   </ul>
 </template>
 
@@ -18,4 +18,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.ship-list{
+  background-color: grey;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 10px;
+  list-style-position:inside;
+  border: 1px solid black;
+}
 </style>

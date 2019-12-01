@@ -53,6 +53,7 @@ export default {
   background-color: red;
   display: flex;
   flex-direction: column;
+  padding: 5px;
 
 }
 .container2{
@@ -63,14 +64,11 @@ ul {
   flex-wrap: wrap;
   justify-content: space-around;
   list-style-type: none;
-
-
 }
 
 li {
-  float: left;
-  display: flex;
-  justify-content: space-between;
-  background-color: grey;
+  display: block;
+  margin: 100px;
+
 }
 </style>

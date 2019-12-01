@@ -4,7 +4,7 @@
     <p>Ship Type: {{ship.ship_type}}</p>
     <p>Weight KG: {{ship.weight_kg}}</p>
     <p>Home Port: {{ship.home_port}}</p>
-    <img :src="ship.image" alt=""    height="300" >
+    <img :src="ship.image" alt="disappointing picture"    height="300" >
 
   </div>
 </template>
